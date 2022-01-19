@@ -1,0 +1,16 @@
+C:\Users\e.mustafayev\Desktop\Code\FSDE_3202\System Programming\ProcessesApplication\ProcessesApplication\bin\Debug\net5.0\ProcessesApplication.exe
+C:\Users\e.mustafayev\Desktop\Code\FSDE_3202\System Programming\ProcessesApplication\ProcessesApplication\bin\Debug\net5.0\ProcessesApplication.deps.json
+C:\Users\e.mustafayev\Desktop\Code\FSDE_3202\System Programming\ProcessesApplication\ProcessesApplication\bin\Debug\net5.0\ProcessesApplication.runtimeconfig.json
+C:\Users\e.mustafayev\Desktop\Code\FSDE_3202\System Programming\ProcessesApplication\ProcessesApplication\bin\Debug\net5.0\ProcessesApplication.runtimeconfig.dev.json
+C:\Users\e.mustafayev\Desktop\Code\FSDE_3202\System Programming\ProcessesApplication\ProcessesApplication\bin\Debug\net5.0\ProcessesApplication.dll
+C:\Users\e.mustafayev\Desktop\Code\FSDE_3202\System Programming\ProcessesApplication\ProcessesApplication\bin\Debug\net5.0\ref\ProcessesApplication.dll
+C:\Users\e.mustafayev\Desktop\Code\FSDE_3202\System Programming\ProcessesApplication\ProcessesApplication\bin\Debug\net5.0\ProcessesApplication.pdb
+C:\Users\e.mustafayev\Desktop\Code\FSDE_3202\System Programming\ProcessesApplication\ProcessesApplication\obj\Debug\net5.0\ProcessesApplication.csproj.AssemblyReference.cache
+C:\Users\e.mustafayev\Desktop\Code\FSDE_3202\System Programming\ProcessesApplication\ProcessesApplication\obj\Debug\net5.0\ProcessesApplication.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\e.mustafayev\Desktop\Code\FSDE_3202\System Programming\ProcessesApplication\ProcessesApplication\obj\Debug\net5.0\ProcessesApplication.AssemblyInfoInputs.cache
+C:\Users\e.mustafayev\Desktop\Code\FSDE_3202\System Programming\ProcessesApplication\ProcessesApplication\obj\Debug\net5.0\ProcessesApplication.AssemblyInfo.cs
+C:\Users\e.mustafayev\Desktop\Code\FSDE_3202\System Programming\ProcessesApplication\ProcessesApplication\obj\Debug\net5.0\ProcessesApplication.csproj.CoreCompileInputs.cache
+C:\Users\e.mustafayev\Desktop\Code\FSDE_3202\System Programming\ProcessesApplication\ProcessesApplication\obj\Debug\net5.0\ProcessesApplication.dll
+C:\Users\e.mustafayev\Desktop\Code\FSDE_3202\System Programming\ProcessesApplication\ProcessesApplication\obj\Debug\net5.0\ref\ProcessesApplication.dll
+C:\Users\e.mustafayev\Desktop\Code\FSDE_3202\System Programming\ProcessesApplication\ProcessesApplication\obj\Debug\net5.0\ProcessesApplication.pdb
+C:\Users\e.mustafayev\Desktop\Code\FSDE_3202\System Programming\ProcessesApplication\ProcessesApplication\obj\Debug\net5.0\ProcessesApplication.genruntimeconfig.cache

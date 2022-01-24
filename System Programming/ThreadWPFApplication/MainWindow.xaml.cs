@@ -24,6 +24,8 @@ namespace ThreadWPFApplication
         public MainWindow()
         {
             InitializeComponent();
+
+            base.DataContext = new MainViewModel();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -37,15 +39,15 @@ namespace ThreadWPFApplication
 
             
             // works
-            new Thread(() =>
-            {
-                Console.WriteLine("Start");
-                Dispatcher.Invoke(() =>
-                {
-                    this.MyProgressBar.Value = 80;
-                });
-                Console.WriteLine("End");
-            }).Start();
+            //new Thread(() =>
+            //{
+            //    Console.WriteLine("Start");
+            //    Dispatcher.Invoke(() =>
+            //    {
+            //        this.MyProgressBar.Value = 80;
+            //    });
+            //    Console.WriteLine("End");
+            //}).Start();
         }
     }
 }

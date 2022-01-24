@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Collections.Generic;
 using System.Threading;
+using System.IO;
 
 namespace ThreadApplication
 {
@@ -88,27 +89,49 @@ namespace ThreadApplication
                 Console.ReadKey();
             }
 
-            if(true)
+            if(false)
             {
                 int x = 0;
+                string locker = string.Empty;
+
+                Mutex mutex = new Mutex();
+                Semaphore semaphore = new Semaphore(50, 100);
 
                 new Thread(() =>
                 {
                     Console.WriteLine("Thread start");
-                    for (int i = 0; i < 100000; i++)
+                    for (int i = 0; i < 1000000; i++)
                     {
-                        Interlocked.Increment(ref x);
+                        //semaphore.WaitOne();
+                        //x++;
+                        //semaphore.Release();
+
+                        //mutex.WaitOne();
+                        //x++;
+                        //mutex.ReleaseMutex();
+
+                        //lock(locker)
+                        //{
+                        //    x++;
+                        //}
+
+                        //Monitor.Enter(locker);
+                        //x++;
+                        //Monitor.Exit(locker);
+
+                        //Interlocked.Increment(ref x);
                     }
                     Console.WriteLine("Thread end");
                 }).Start();
 
                 new Thread(() =>
                 {
-                    
                     Console.WriteLine("Thread start");
-                    for (int i = 0; i < 100000; i++)
+                    for (int i = 0; i < 1000000; i++)
                     {
-                        Interlocked.Increment(ref x);
+                        semaphore.WaitOne();
+                        x++;
+                        semaphore.Release();
                     }
                     Console.WriteLine("Thread end");
                 }).Start();
@@ -116,6 +139,15 @@ namespace ThreadApplication
                 Console.ReadKey();
 
                 Console.WriteLine(x);
+            }
+
+            if(false)
+            {
+                Mutex mutex = new Mutex(true, "My Mutex Application", out bool createdNew);
+                if(createdNew)
+                {
+                    Thread.Sleep(10000);
+                }
             }
         }
 

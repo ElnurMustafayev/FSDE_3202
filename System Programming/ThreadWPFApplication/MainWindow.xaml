@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <StackPanel>
-        <Button Height="50" Content="Start Thread" Click="Button_Click"/>
-        <ProgressBar x:Name="MyProgressBar" Height="50" Value="30"/>
+        <Button Height="50" Content="Start Thread" Command="{Binding ButtonClickCommand}"/>
+        <ProgressBar x:Name="MyProgressBar" Height="50" Value="{Binding ProgressBarValue}"/>
     </StackPanel>
 </Window>

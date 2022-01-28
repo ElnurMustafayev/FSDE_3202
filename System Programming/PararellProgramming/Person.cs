@@ -10,9 +10,11 @@ namespace PararellProgramming
     {
         public string Name;
         public int Age;
+        public int DoWorkTimeInMs;
 
-        public Person(string name, int age)
+        public Person(string name, int age, int doWorkTimeInMs)
         {
+            this.DoWorkTimeInMs = doWorkTimeInMs;
             this.Name = name;
             this.Age = age;
         }

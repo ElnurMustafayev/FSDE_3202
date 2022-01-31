@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BaseLibrary\BaseLibrary.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="BaseLibrary">
+      <HintPath>..\BaseLibrary\bin\Debug\net5.0\BaseLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="FirstLibrary">
+      <HintPath>..\Libraries\FirstLibrary\bin\Debug\net5.0\FirstLibrary.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

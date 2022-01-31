@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="BaseLibrary">
+      <HintPath>..\..\BaseLibrary\bin\Debug\net5.0\BaseLibrary.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

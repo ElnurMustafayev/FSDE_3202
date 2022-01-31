@@ -196,7 +196,7 @@ namespace TaskApplication
                 }
             }
 
-            if(true)
+            if(false)
             {
                 Start();
 
@@ -205,6 +205,63 @@ namespace TaskApplication
                     Thread.Sleep(100);
                     Console.WriteLine(i);
                 }
+
+                Console.ReadKey();
+            }
+
+            if(false)
+            {
+                var task = Task.Run(() =>
+                {
+                    Thread.Sleep(2000);
+                    Console.WriteLine("Thread end!");
+                }).ContinueWith(t =>
+                {
+                    Thread.Sleep(2000);
+                    Console.WriteLine($"Task id is: {t.Id}");
+                }).ContinueWith(t =>
+                {
+                    Console.WriteLine("All tasks end!");
+                });
+
+                task.Wait();
+            }
+
+            if(false)
+            {
+                var token = new CancellationTokenSource();
+
+                Task.Run(() =>
+                {
+                    for (int i = 0; i < 100; i++)
+                    {
+                        Thread.Sleep(100);
+                        Console.WriteLine(i);
+                    }
+                }, token.Token);
+
+                Thread.Sleep(2000);
+                token.Cancel();
+
+                Console.ReadKey();
+            }
+
+            if(false)
+            {
+                var task1 = Task.Factory.StartNew(() => { Thread.Sleep(3000); Console.WriteLine("First"); });
+                var task2 = Task.Factory.StartNew(() => { Thread.Sleep(2000); Console.WriteLine("Second"); });
+                var task3 = Task.Factory.StartNew(() => { Thread.Sleep(1000); Console.WriteLine("Third"); });
+
+                Task.Factory.ContinueWhenAll(
+                    tasks: new Task[] { task1, task2, task3 },
+                    continuationAction: tasks =>
+                    {
+                        tasks.ToList().ForEach(t =>
+                        {
+                            Console.WriteLine($"Thread {t.Id} end!");
+                        });
+                    }
+                    );
 
                 Console.ReadKey();
             }

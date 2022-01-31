@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31424.327
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnsafeApplication", "UnsafeApplication.csproj", "{56893CC2-5DC3-47D9-858D-A7ADD9ECFDEA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{56893CC2-5DC3-47D9-858D-A7ADD9ECFDEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56893CC2-5DC3-47D9-858D-A7ADD9ECFDEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56893CC2-5DC3-47D9-858D-A7ADD9ECFDEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56893CC2-5DC3-47D9-858D-A7ADD9ECFDEA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {69B18A6C-C90A-4EF4-B472-DCA06CDC4B9C}
+	EndGlobalSection
+EndGlobal

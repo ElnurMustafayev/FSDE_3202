@@ -7,6 +7,10 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <StackPanel>
+        <ListBox ItemsSource="{Binding UserServicesCollection}" SelectedItem="{Binding CurrentService}"/>
+        
         <ListBox ItemsSource="{Binding Users}"/>
+
+        <Button Command="{Binding AddUserCommand}" Content="Add User"/>
     </StackPanel>
 </Window>

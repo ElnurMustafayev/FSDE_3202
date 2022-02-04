@@ -1,5 +1,6 @@
 ﻿using BaseProject;
 using GalaSoft.MvvmLight;
+using GalaSoft.MvvmLight.CommandWpf;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -15,19 +16,31 @@ namespace UsersApplication.ViewModels
 {
     public class MainViewModel : ViewModelBase
     {
+        public User UserToAdd = new User()
+        {
+            Id = 0,
+            FirstName = "Alex",
+            LastName = "Brown",
+            Age = 56
+        };
+
         public ObservableCollection<User> Users { get; set; }
 
-        public List<IUserService> userServicesCollection = new List<IUserService>();
+        public IUserService CurrentService { get; set; } = new UserLocalService();
+
+        public ObservableCollection<IUserService> UserServicesCollection { get; set; } = new ObservableCollection<IUserService>();
 
         public MainViewModel()
         {
+            UserServicesCollection.Add(CurrentService);
+
             var dllFiles = Directory.GetFiles(path: "Plugins")
                 .Where(filename => filename.EndsWith(".dll"));
 
             foreach (var file in dllFiles)
             {
                 string absolutePath = $@"{Directory.GetCurrentDirectory()}\{file}";
-                var pluginAssembly = Assembly.LoadFile(absolutePath);
+                Assembly pluginAssembly = Assembly.LoadFile(absolutePath);
                 var userServices = from t in pluginAssembly.GetTypes()
                                    where t.GetInterface("IUserService") != null
                                    select t;
@@ -36,15 +49,27 @@ namespace UsersApplication.ViewModels
                 {
                     return Activator.CreateInstance(t) as IUserService;
                 });
-                userServicesCollection.AddRange(services);
+
+                foreach (var service in services)
+                {
+                    UserServicesCollection.Add(service);
+                }
             }
 
-            IUserService userService = new UserLocalService();
             this.Users = new ObservableCollection<User>();
 
             UserLocalService.Users = this.Users;
-            userService.Add(new User("Ergun", "Taqiyev", 16));
-            userService.Add(new User("Imran", "Jabrayilov", 20));
+            CurrentService.Add(new User("Ergun", "Taqiyev", 16));
+            CurrentService.Add(new User("Imran", "Jabrayilov", 20));
+        }
+
+        private RelayCommand addUserCommand;
+        public RelayCommand AddUserCommand
+        {
+            get => addUserCommand ??= new RelayCommand(() =>
+            {
+                CurrentService?.Add(UserToAdd);
+            });
         }
     }
 }

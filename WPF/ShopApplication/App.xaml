@@ -1,0 +1,18 @@
+﻿<Application x:Class="ShopApplication.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:ShopApplication"
+             xmlns:vm="clr-namespace:ShopApplication.ViewModels"
+             xmlns:v="clr-namespace:ShopApplication.Views">
+    <Application.Resources>
+
+        <DataTemplate DataType="{x:Type vm:HomeViewModel}">
+            <v:HomeWindow/>
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type vm:SecondViewModel}">
+            <v:SecondWindow/>
+        </DataTemplate>
+
+    </Application.Resources>
+</Application>

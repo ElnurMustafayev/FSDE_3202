@@ -1,0 +1,19 @@
+﻿<Window x:Class="ShopApplication.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ShopApplication"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <UniformGrid Rows="1" Columns="2">
+        <ContentControl Content="{Binding ActiveViewModel}"/>
+        
+        <StackPanel>
+            <TextBlock Text="{Binding Text}"/>
+            <TextBlock Text="{Binding Number}"/>
+
+            <Button Content="Click" Command="{Binding ClickCommand}"/>
+        </StackPanel>
+    </UniformGrid>
+</Window>

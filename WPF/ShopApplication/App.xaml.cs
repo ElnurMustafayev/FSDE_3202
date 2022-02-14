@@ -1,5 +1,7 @@
-﻿using ShopApplication.Tools;
+﻿using ShopApplication.Services;
+using ShopApplication.Tools;
 using ShopApplication.ViewModels;
+using SimpleInjector;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -15,10 +17,26 @@ namespace ShopApplication
     /// </summary>
     public partial class App : Application
     {
+        public static Container Container;
+
         protected override void OnStartup(StartupEventArgs e)
         {
             base.OnStartup(e);
+            SetServices();
             SetStartWindow<SecondViewModel>();
+        }
+
+        private void SetServices()
+        {
+            Container = new Container();
+
+            Container.RegisterSingleton<IProductService, ProductEfCoreService>();
+
+            Container.RegisterSingleton<HomeViewModel>();
+            Container.RegisterSingleton<SecondViewModel>();
+            Container.RegisterSingleton<MainViewModel>();
+
+            Container.Verify();
         }
 
         private void SetStartWindow<T>() where T: ViewModelBase

@@ -13,7 +13,8 @@
             <TextBlock Text="{Binding Text}"/>
             <TextBlock Text="{Binding Number}"/>
 
-            <Button Content="Click" Command="{Binding ClickCommand}"/>
+            <Button Content="Home" Command="{Binding HomeCommand}"/>
+            <Button Content="Second" Command="{Binding SecondCommand}"/>
         </StackPanel>
     </UniformGrid>
 </Window>

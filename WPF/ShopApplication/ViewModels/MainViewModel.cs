@@ -41,22 +41,26 @@ namespace ShopApplication.ViewModels
             }
         }
 
-        CommandBase clickCommand;
-        public CommandBase ClickCommand => clickCommand ??= new CommandBase()
+        private CommandBase homeCommand;
+        public CommandBase HomeCommand => homeCommand ??= new CommandBase()
         {
             execute = () =>
             {
-                Task.Run(() =>
-                {
-                    Thread.Sleep(2000);
-                    this.ActiveViewModel = new HomeViewModel();
-                    this.Text = Guid.NewGuid().ToString();
-                    commandFlag = false;
-                });
+                this.ActiveViewModel = App.Container.GetInstance<HomeViewModel>();
             },
-            canExecute = () => commandFlag,
+            canExecute = () => true,
         };
-        private bool commandFlag = true;
+
+        private CommandBase secondCommand;
+
+        public CommandBase SecondCommand => secondCommand ??= new CommandBase()
+        {
+            execute = () =>
+            {
+                this.ActiveViewModel = App.Container.GetInstance<SecondViewModel>();
+            },
+            canExecute = () => true,
+        };
 
         public MainViewModel() 
         {

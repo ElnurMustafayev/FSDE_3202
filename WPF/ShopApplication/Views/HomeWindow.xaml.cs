@@ -24,8 +24,6 @@ namespace ShopApplication.Views
         public HomeWindow()
         {
             InitializeComponent();
-
-            DataContext = new HomeViewModel();
         }
     }
 }

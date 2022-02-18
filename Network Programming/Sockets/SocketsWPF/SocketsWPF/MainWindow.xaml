@@ -1,0 +1,20 @@
+﻿<Window x:Class="SocketsWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SocketsWPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <StackPanel Margin="20">
+        <DockPanel Margin="5">
+            <Label Content="Name"/>
+            <TextBox x:Name="ClientName" />
+        </DockPanel>
+        <DockPanel Margin="5">
+            <Label Content="Message"/>
+            <TextBox x:Name="ClientMessage" />
+        </DockPanel>
+        <Button Content="Send" MaxWidth="100" Click="Button_Click"/>
+    </StackPanel>
+</Window>

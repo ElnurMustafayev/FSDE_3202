@@ -1,4 +1,6 @@
-﻿using GalaSoft.MvvmLight;
+﻿using Client.Messages;
+using Client.Tools;
+using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.CommandWpf;
 using System;
 using System.Collections.Generic;
@@ -29,18 +31,25 @@ namespace Client.ViewModels
 
 
         private RelayCommand connectCommand;
+        private readonly IMessenger messenger;
 
         public RelayCommand ConnectCommand => connectCommand ??= new RelayCommand(
             execute: () =>
             {
-                //App.Container.GetInstance<MainViewModel>().ActiveViewModel = App.Container.GetInstance<HomeViewModel>();
-                // TODO: Connect
+                var message = new ChangeActiveViewModelMessage()
+                {
+                    NewActiveViewModel = App.Container.GetInstance<HomeViewModel>(),
+                };
+
+                messenger.Send(message);
             },
             canExecute: () => string.IsNullOrWhiteSpace(this.ClientName) == false
             && ChatId is not null
             );
 
-
-
+        public RegistrationViewModel(IMessenger messenger)
+        {
+            this.messenger = messenger;
+        }
     }
 }

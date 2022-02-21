@@ -1,4 +1,6 @@
-﻿using Client.ViewModels;
+﻿using Client.Services;
+using Client.Tools;
+using Client.ViewModels;
 using GalaSoft.MvvmLight;
 using SimpleInjector;
 using System;
@@ -29,11 +31,11 @@ namespace Client
         {
             Container = new Container();
 
-            //Container.RegisterSingleton<IProductService, ProductEfCoreService>();
+            Container.RegisterSingleton<IMessenger, Messenger>();
 
             Container.RegisterSingleton<HomeViewModel>();
-            //Container.RegisterSingleton<SecondViewModel>();
             Container.RegisterSingleton<MainViewModel>();
+            Container.RegisterSingleton<RegistrationViewModel>();
 
             Container.Verify();
         }
@@ -41,7 +43,7 @@ namespace Client
         private void SetStartWindow<T>() where T : ViewModelBase
         {
             var mainViewModel = Container.GetInstance<MainViewModel>();
-            mainViewModel.ActiveViewModel = Activator.CreateInstance<T>();
+            mainViewModel.ActiveViewModel = Container.GetInstance<T>();
 
             var mainWindow = new MainWindow();
             mainWindow.DataContext = mainViewModel;

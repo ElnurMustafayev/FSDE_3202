@@ -21,11 +21,20 @@
             
             <TextBlock Text="Chat Name" Grid.Row="0"/>
             
-            <ListView Height="380" Grid.Row="1"></ListView>
+            <ListView Grid.Row="1" ItemsSource="{Binding Messages}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <DockPanel>
+                            <TextBlock Margin="10" Text="{Binding SenderName}"/>
+                            <TextBlock Margin="10" Text="{Binding Content}"/>
+                        </DockPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
 
             <DockPanel Grid.Row="2" Height="30">
-                <Button Content="Send"/>
-                <TextBox DockPanel.Dock="Left"/>
+                <Button Command="{Binding SendMessageCommand}" Content="Send"/>
+                <TextBox Text="{Binding CurrentMessage, Mode=TwoWay}" VerticalContentAlignment="Center" DockPanel.Dock="Left"/>
             </DockPanel>
         </Grid>
 

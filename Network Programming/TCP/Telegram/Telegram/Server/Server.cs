@@ -51,6 +51,13 @@ namespace Server
                             string JSON = await reader.ReadLineAsync();
                             var message = JsonSerializer.Deserialize<Message>(JSON);
 
+                            foreach (var client in clients)
+                            {
+                                var writer = new StreamWriter(client.GetStream());
+                                writer.WriteLine(JSON);
+                                writer.Flush();
+                            }
+
                             await Context.Messages.AddAsync(message);
                             await Context.SaveChangesAsync();
 

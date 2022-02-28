@@ -13,6 +13,6 @@
         </Grid.RowDefinitions>
 
         <Button Content="Open connection"/>
-        <Image Grid.Row="1" Source="cat.png"/>
+        <Image Grid.Row="1" Source="{Binding Image}"/>
     </Grid>
 </Window>

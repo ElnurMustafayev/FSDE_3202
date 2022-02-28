@@ -48,41 +48,48 @@ namespace Client.ViewModel
         public RelayCommand ShareScreenCommand => shareScreenCommand ??= new RelayCommand(
             execute: () =>
             {
-                Task.Run(() => SetImage());
+                Task.Run(() => SendImage());
             }
             );
 
-        private void SetImage()
+        private async void SendImage()
         {
-            var imgInBytes = CaptureScreen();
-            var server = new UdpClient();
-            IPEndPoint serverEndPoint = new IPEndPoint(
-                address: IPAddress.Parse("127.0.0.1"),
-                port: 8080
-                );
-            server.Send(imgInBytes, imgInBytes.Length, serverEndPoint);
-            return;
+            const int packetSize = 5000;
 
-            while (true)
+            try
             {
-                Thread.Sleep(1);
-                Application.Current.Dispatcher.Invoke(() =>
+                var server = new UdpClient();
+                IPEndPoint serverEndPoint = new IPEndPoint(
+                    address: IPAddress.Parse("127.0.0.1"),
+                    port: 8080
+                    );
+
+                byte[] buffer = new byte[packetSize];
+                while(true)
                 {
-                    Image = ByteToImage(CaptureScreen());
-                });
+                    Thread.Sleep(1);
+                    byte[] imgInBytes = CaptureScreen();
+                    using (MemoryStream memory = new MemoryStream(imgInBytes))
+                    {
+                        while(true)
+                        {
+                            int size = await memory.ReadAsync(buffer, 0, packetSize);
+
+                            await server.SendAsync(buffer, size, serverEndPoint);
+
+                            if (size == 0)
+                                break;
+                        }
+
+                        byte[] endMessage = Encoding.UTF8.GetBytes("END IMAGE");
+                        await server.SendAsync(endMessage, endMessage.Length, serverEndPoint);
+                    }
+                }
             }
-        }
-
-        public ImageSource ByteToImage(byte[] imageData)
-        {
-            BitmapImage biImg = new BitmapImage();
-            MemoryStream ms = new MemoryStream(imageData);
-            biImg.BeginInit();
-            biImg.StreamSource = ms;
-            biImg.EndInit();
-
-            ImageSource imgSrc = biImg as ImageSource;
-            return imgSrc;
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         public byte[] CaptureScreen()
@@ -95,7 +102,7 @@ namespace Client.ViewModel
             using Graphics g = Graphics.FromImage(bmp);
             g.CopyFromScreen(0, 0, 0, 0, System.Windows.Forms.Screen.PrimaryScreen.Bounds.Size);
             Bitmap objBitmap = new Bitmap(bmp, (int)(width), (int)(height));
-            objBitmap.Save(memory, ImageFormat.Png);
+            objBitmap.Save(memory, ImageFormat.Jpeg);
             return memory.GetBuffer();
         }
     }

@@ -1,0 +1,31 @@
+git clone
+git status
+
+git add Program.cs
+git add *.txt
+git add .
+
+git branch
+git branch -a
+git branch -d <branch_name>
+git branch -c <branch_name>
+
+git commit -m "Commit Name"
+git commit -m "Commit Name" -m "Commit Description"
+git commit
+
+git push origin <branch_name>
+git push --delete origin <branch_name>
+
+git checkout <commit_id>
+git checkout <branch_name>
+
+git log
+git log --oneline
+git log --graph --decorate
+
+git merge <branch_name>
+
+- - - - - - - - - 
+.gitignore
+.gitkeep

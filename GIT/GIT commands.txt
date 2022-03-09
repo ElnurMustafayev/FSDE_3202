@@ -17,6 +17,8 @@ git commit
 git push origin <branch_name>
 git push --delete origin <branch_name>
 
+git pull origin <branch_name>
+
 git checkout <commit_id>
 git checkout <branch_name>
 

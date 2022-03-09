@@ -13,11 +13,11 @@ namespace Server
             server.Prefixes.Add("http://*:80/");
             server.Start();
 
-            //HttpListenerContext context = await server.GetContextAsync();
-            //var requestReader = new StreamReader(context.Request.InputStream);
+            HttpListenerContext context = await server.GetContextAsync();
+            var requestReader = new StreamReader(context.Request.InputStream);
 
-            //string requestStr = await requestReader.ReadToEndAsync();
-            //Console.WriteLine(requestStr);
+            string requestStr = await requestReader.ReadToEndAsync();
+            Console.WriteLine(requestStr);
         }
     }
 }

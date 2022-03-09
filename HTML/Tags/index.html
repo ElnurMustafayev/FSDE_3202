@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Tags</title>
+</head>
+
+<body>
+    <!-- 
+        Divide html
+        headers
+    -->
+    <div>
+        <h1>Header 1</h1>
+        <h2>Header 2</h2>
+        <h3>Header 3</h3>
+        <h4>Header 4</h4>
+        <h5>Header 5</h5>
+        <h6>Header 6</h6>
+    </div>
+
+    <div>
+        <p>
+            Hello
+
+            it is my
+            Paragraph
+        </p>
+    </div>
+
+    <div>
+        <h1>Qalmaqallı “Şuşa” komandasının Rusiyadakı oyunu TƏXİRƏ SALINDI</h1>
+
+        <p>
+        <p>Mart ayında keçirilməsi nəzərdə tutulan “Şuşa” komandasının oyunu təxirə salınıb. </p>
+        <p>Bu barədə Lent.az-a “Şuşa” Şən və Hazırcavablar Klubunun (KVN) rəhbəri, ssenarist və prodüsser Müşfiq Abbasov
+            bildirib. O qeyd edib, çempionat may ayında baş tutacaq:</p>
+        <p>“Məlum məsələlərə görə oyunumuz mart ayından may ayına keçirilib. Tək bizim tədbirimiz yox, Ruysiyada
+            mart-aprel aylarında baş tutacaq bütün tədbirlər təxirə salınıb”.</p>
+
+        Xatırladaq ki, yanvar ayında Rusiyanın Soçi şəhərində keçirilən KVN komandalarının 33-cü Beynəlxalq Festivalında
+        (“KVN-2022”) Azərbaycanı təmsil edən “Şuşa” komandasının adının “Buta” ilə əvəzlənməsi geniş müzakirələrə səbəb
+        olmuşdu.
+        <br>
+        <br>
+        Bu müzakirələrdən sonra Müşfiq Abbasov bildirmişdi ki, Maslyakov oyunu bəyənib:
+        <br>
+        <br>
+        “Görüşdə ad məsələsini ona bildirdim. Qeyd etdim ki, əgər adımız “Şuşa” olmasa, biz oyuna davam etməyəcəyik.
+        Mart ayında Sankt-Peterburqda baş tutacaq 1/8 finalda “Şuşa” adı ilə oyuna çıxacağıq”
+        </p>
+    </div>
+
+    <div>
+        <ul>
+            <li>one</li>
+            <li>two</li>
+            <li>three</li>
+        </ul>
+
+        <ol>
+            <li>one</li>
+            <li>two</li>
+            <li>three</li>
+        </ol>
+
+        <!-- Snippets -->
+        <!-- ul>li -->
+        <!-- ul>(li*10) -->
+        <!-- ul>((li>p)*5) -->
+    </div>
+
+    <div>
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus assumenda vero ut odio? Dolores, facilis
+            animi. Eveniet quibusdam debitis nemo perspiciatis voluptatibus magni ex quas illum. Aliquam, ut fugit ipsam
+            aut omnis nihil saepe veritatis, iure doloremque, consequatur rerum tempora? Quasi consequatur eius
+            inventore cum magni! Alias, numquam laudantium? Vero voluptatem eligendi tempore aliquam, quia, nemo quam
+            minima rem rerum quaerat ab at molestias earum. Totam accusamus nisi, saepe necessitatibus exercitationem
+            nostrum soluta quas quam quia repellendus esse quidem ducimus reiciendis consequuntur incidunt blanditiis
+            inventore temporibus! Accusantium quo eum alias repellendus? Perspiciatis odio odit doloribus architecto
+            voluptate temporibus consequuntur quasi!
+        </p>
+    </div>
+
+    <div>
+        <a href="https://google.com">Google</a>
+        <hr>
+        <a href="https://google.com" target="_blank">Google in new blank</a>
+    </div>
+
+    <div>
+        <p>
+            See my projects in
+            <a href="https://github.com/ElnurMustafayev">Github</a>
+            account
+        </p>
+
+        <p>
+            Or call my
+            <a href="tel:+994513522520">phone</a>
+        </p>
+
+        <p>
+            Or write my
+            <a href="mailto:elnur.mustafayeev@gmail.com">mail</a>
+            or
+            <a href="https://wa.me/+994513522520">whats app</a>
+        </p>
+    </div>
+
+    <div>
+        <!-- logic -->
+        <strong>Lorem ipsum dolor sit amet consectetur adipisicing elit.</strong>
+        <br>
+        <em>Soluta ipsam ex cumque ut dicta aspernatur consequuntur</em>
+        <br>
+
+        <!-- no logic -->
+        <b>Lorem ipsum dolor sit amet consectetur adipisicing elit.</b>
+        <br>
+        <i>Soluta ipsam ex cumque ut dicta aspernatur consequuntur</i>
+        <br>
+        
+        obcaecati necessitatibus quos accusamus!
+    </div>
+
+    <div>
+        <code>
+            <var>
+                string apiString = @"https://pogoapi.net/api/v1/pokemon_names.json";
+            </var>
+            
+            <var>
+                HttpWebRequest request = HttpWebRequest.Create(apiString) as HttpWebRequest;
+            </var>
+
+            <kbd>
+                ctrl
+            </kbd>
+
+            HttpWebResponse response = await request.GetResponseAsync() as HttpWebResponse;
+
+            using (var stream = new StreamReader(response.GetResponseStream()))
+            {
+                var json = stream.ReadToEnd();
+                var pokemonResponse = JsonSerializer.Deserialize<PokemonResponse>(json);
+            }
+        </code>
+    </div>
+
+    <!-- UTF-8 -->
+    <div>
+        <p>I will display &spades;</p>
+        <p>I will display &#9824;</p>
+        <p>I will display &#x2660;</p>
+    </div>
+
+    <!-- HTML 5 -->
+    <div>
+        <article>
+            <h1>Qalmaqallı “Şuşa” komandasının Rusiyadakı oyunu TƏXİRƏ SALINDI</h1>
+
+            <main>
+                content
+            </main>
+        </article>
+
+        <nav>
+            <ul>
+                <li>home</li>
+                <li>about us</li>
+                <li>Documentation</li>
+            </ul>
+        </nav>
+
+        <aside>
+            <menu>
+                
+            </menu>
+        </aside>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        h1 {
+            font-family: 'Courier New', Courier, monospace;
+            color: red !important;
+            color: blue;
+            background-color: yellow !important;
+        }
+
+        #qwerty {
+            border: 1px solid black;
+        }
+
+        .box {
+            width: 500px;
+            height: 500px;
+            background-color: red;
+            border-radius: 10px 1px 5px 30px;
+
+            border-width: 10px;
+            border-style: solid;
+            border-color: black;
+
+            border: 5px dotted blue;
+
+            padding: 20px;
+            padding-bottom: 50px;
+            margin: 20px;
+        }
+
+        div.box {
+            background-color: green;
+        }
+
+        .container {
+            width: 100px;
+            height: 100px;
+            background-color: brown;
+            padding: 20px;
+        }
+
+        .container .item {
+            width: 50px;
+            height: 50px;
+            background-color: #00ffff5d;
+            margin: 5px;
+        }
+
+        .container > .item {
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            margin: 5px;
+        }
+
+        div.container[elnur] {
+            background-color: black;
+        }
+
+        div.container[elnur=qwerty] {
+            background-color: darkcyan;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container" elnur="qwerty">
+        <div>
+            <div class="item">
+            </div>
+        </div>
+    </div>
+
+    <div class="box" id="qwerty">
+        <h1 style="background-color: paleturquoise;">Soccer-'Business as usual'</h1>
+
+        <h1>Qwerty</h1>
+    </div>
+
+    <article class="box">
+
+    </article>
+</body>
+
+</html>

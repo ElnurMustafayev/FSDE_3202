@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        table > thead {
+            background-color: #808080;
+        }
+
+        table > thead tr th {
+            width: 80px;
+            text-align: left;
+        }
+
+        table th,
+        table td {
+            padding: 10px;
+        }
+
+        table > tbody tr {
+            background-color: red;
+        }
+
+        table > tbody tr:nth-child(even) {
+            background-color: #d1d1d1;
+        }
+
+        table > tbody > tr:hover {
+            cursor: pointer;
+            background-color: #929292;
+        }
+
+        table > tbody > tr:active {
+            cursor: pointer;
+            background-color: #b9b9ff;
+        }
+    </style>
+
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>County</th>
+                <th>Company</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Elnur</td>
+                <td>Mustafayev</td>
+                <td>Azerbaijan</td>
+                <td>Microsoft</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Tural</td>
+                <td>Quliyev</td>
+                <td>Azerbaijan</td>
+                <td>Google</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Tamerlan</td>
+                <td>Hasanov</td>
+                <td>Azerbaijan</td>
+                <td>Step IT</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

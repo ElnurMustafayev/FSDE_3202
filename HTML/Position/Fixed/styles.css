@@ -1,0 +1,28 @@
+.content {
+    background-color: antiquewhite;
+    height: 400vh;
+}
+
+header h1,
+footer h1          
+{
+    background-color: yellow;
+    font-weight: bold;
+    font-style: italic;
+    text-decoration: line-through;
+    text-align: center;
+    margin: 0;
+    width: 100px;
+    height: 100px;
+}
+
+main {
+    word-spacing: 10px;
+    line-height: 50px;
+}
+
+header {
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+}

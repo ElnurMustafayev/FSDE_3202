@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .inlines h1 {
+            background-color: blue;
+            display: inline;
+        }
+
+        .center_button {
+            text-align: center;
+        }
+
+         .center_button button {
+            display: block;
+            background-color: red;
+            width: 50%;
+            margin: auto;
+        } 
+
+        .margin_for_blocks > h1 {
+            background-color: green;
+            width: 50%;
+            height: 200px;
+            color: white;
+            text-align: center;
+            margin: auto;
+        }
+
+        .margin_for_blocks > span {
+            background-color: red;
+            width: 10px;
+            height: 100px;
+            text-align: right;
+        }
+
+        .block_elements > * {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="inlines">
+        <h1>Inline Header</h1>
+    </div>
+
+    <div class="center_button">
+        <button>Ok</button>
+    </div>
+    
+    <div class="margin_for_blocks">
+        <h1>Title</h1>
+
+        <span>Description</span>
+    </div>
+
+    <div class="block_elements">
+        <h1>Hello world!</h1>
+    
+        <p>Description</p>
+
+        <span>Description</span>
+
+        <i>italic
+
+            <b>bold</b>
+
+        </i>
+    </div>
+</body>
+</html>

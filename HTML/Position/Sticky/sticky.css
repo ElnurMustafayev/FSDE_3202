@@ -1,0 +1,29 @@
+ul > li {
+    display: inline;
+    margin: 10px;
+}
+
+ul {
+    width: 50%;
+    margin: auto;
+    padding: 50px;
+}
+
+nav {
+    background-color: aqua;
+}
+
+main {
+    word-spacing: 10px;
+    line-height: 50px;
+}
+
+.content {
+    background-color: antiquewhite;
+    height: 400vh;
+}
+
+header {
+    position: sticky;
+    top: 50px;
+}

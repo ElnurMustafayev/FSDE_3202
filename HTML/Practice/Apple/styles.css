@@ -1,0 +1,48 @@
+body {
+    background-color: white;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+body header .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 1000px;
+    margin: auto;
+}
+
+body header {
+    background-color: #000000cc;
+}
+
+body header nav {
+    flex: 1;
+}
+
+body header nav a {
+    transition: 0.3s;
+    color: #d3d3d3;
+}
+
+body header nav a:hover {
+    color: white;
+}
+
+body header nav ul {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+header .content .icon * {
+    display: flex;
+    align-items: center;
+}

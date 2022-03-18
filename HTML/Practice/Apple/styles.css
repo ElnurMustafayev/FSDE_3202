@@ -12,16 +12,16 @@ ul {
     list-style: none;
 }
 
+body header {
+    background-color: #000000cc;
+}
+
 body header .content {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 1000px;
     margin: auto;
-}
-
-body header {
-    background-color: #000000cc;
 }
 
 body header nav {

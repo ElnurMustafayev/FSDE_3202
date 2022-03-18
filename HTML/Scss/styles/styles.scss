@@ -1,0 +1,56 @@
+$white: #fff;
+
+// - - - - - GENERAL - - - - - 
+body {
+    
+    a {
+        color: $white;
+        text-decoration: none;
+    }
+    
+    ul {
+        padding: 0;
+        list-style: none;
+    }
+}
+
+// - - - - CONTENT - - - - - 
+body {
+    background-color: $white;
+
+    header {
+        background-color: #000000cc;
+
+        .content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 1000px;
+            margin: auto;
+
+            .icon * {
+                display: flex;
+                align-items: center;
+            }
+        }
+
+        // NAVIGATION
+        nav {
+            flex: 1;
+
+            a {
+                transition: 0.3s;
+                color: #d3d3d3;
+
+                &:hover {
+                    color: $white;
+                }
+            }
+
+            > ul {
+                display: flex;
+                justify-content: space-evenly;
+            }
+        }
+    }
+}

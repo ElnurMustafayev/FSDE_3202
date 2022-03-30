@@ -1,0 +1,14 @@
+body .btn {
+  border-radius: 5px;
+  font-weight: bold;
+  background-color: #9e9ef8;
+}
+
+body .logo {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background-color: #c28686;
+}
+/*# sourceMappingURL=Custom.css.map */

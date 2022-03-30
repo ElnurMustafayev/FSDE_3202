@@ -1,0 +1,127 @@
+@mixin GetLogStyles($size, $back, $front) {
+    font-size: $size;
+    background-color: $back;
+    color: $front;
+}
+
+.log {
+
+    &-success {
+        @include GetLogStyles(20px, green, white);
+    }
+    
+    &-warning {
+        @include GetLogStyles(40px, orange, black);
+    }
+    
+    &-error {
+        @include GetLogStyles(15px, red, white);
+        text-decoration: line-through;
+    }
+}
+
+
+
+$animals: "cat", "dog", "fish";
+
+@each $animal in $animals {
+    .img-#{$animal} {
+        background-image: url("./img/#{$animal}.jpg");
+    }
+}
+
+// .img {
+
+//     &-cat {
+//         background-image: url("./img/cat.jpg");
+//     }
+
+//     &-dog {
+//         background-image: url("./img/dog.jpg");
+//     }
+
+//     &-fish {
+//         background-image: url("./img/fish.jpg");
+//     }
+// }
+
+.image-container {
+    width: 200px;
+    height: 200px;
+    background-color: greenyellow;
+}
+
+
+
+$istest: true;
+
+.page {
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+
+    .first {
+        flex: 1;
+        @if($istest) {
+            background-color: red;
+        }
+    }
+    
+    .second {
+        flex: 1;
+        @if($istest) {
+            background-color: green;
+        }
+    }
+}
+
+
+
+$wrn: "warning";
+$success: "success";
+$fail: "error";
+
+.message-#{$success} {
+    color: green;
+}
+.message-#{$wrn} {
+    color: orange;
+}
+.message-#{$fail} {
+    color: red;
+}
+
+
+
+.content {
+
+    &_title {
+        background-color: red;
+    }
+
+    &_text {
+        background-color: yellow;
+    }
+}
+
+
+
+
+.btn {
+    background-color: black;
+    color: white;
+
+    .container & {
+        padding: 10px;
+    }
+}
+
+body {
+
+    .container {
+
+        .btn {
+            font-size: 20px;
+        }
+    }
+}

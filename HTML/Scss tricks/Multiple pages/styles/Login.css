@@ -1,0 +1,11 @@
+body form {
+  padding: 20px;
+  margin: 20px;
+  border: 1px solid black;
+}
+
+body form > * {
+  display: block;
+  margin: 5px;
+}
+/*# sourceMappingURL=Login.css.map */

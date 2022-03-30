@@ -1,0 +1,95 @@
+.log-success {
+  font-size: 20px;
+  background-color: green;
+  color: white;
+}
+
+.log-warning {
+  font-size: 40px;
+  background-color: orange;
+  color: black;
+}
+
+.log-error {
+  font-size: 15px;
+  background-color: red;
+  color: white;
+  text-decoration: line-through;
+}
+
+.img-cat {
+  background-image: url("./img/cat.jpg");
+}
+
+.img-dog {
+  background-image: url("./img/dog.jpg");
+}
+
+.img-fish {
+  background-image: url("./img/fish.jpg");
+}
+
+.image-container {
+  width: 200px;
+  height: 200px;
+  background-color: greenyellow;
+}
+
+.page {
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.page .first {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background-color: red;
+}
+
+.page .second {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background-color: green;
+}
+
+.message-success {
+  color: green;
+}
+
+.message-warning {
+  color: orange;
+}
+
+.message-error {
+  color: red;
+}
+
+.content_title {
+  background-color: red;
+}
+
+.content_text {
+  background-color: yellow;
+}
+
+.btn {
+  background-color: black;
+  color: white;
+}
+
+.container .btn {
+  padding: 10px;
+}
+
+body .container .btn {
+  font-size: 20px;
+}
+/*# sourceMappingURL=Styles.css.map */

@@ -1,0 +1,45 @@
+body {
+  background-color: black;
+}
+
+a {
+  text-decoration: none;
+}
+
+button,
+.btn,
+input[type="button"],
+input[type="submit"] {
+  color: white;
+  background-color: transparent;
+  font-size: 28px;
+  padding: 10px;
+  font-family: "Courier New", Courier, monospace;
+  display: inline-block;
+  border: 5px solid #ff169e;
+  position: relative;
+}
+
+button::before,
+.btn::before,
+input[type="button"]::before,
+input[type="submit"]::before {
+  content: "";
+  position: absolute;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  z-index: -1;
+  height: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #ff169e;
+}
+
+button:hover::before,
+.btn:hover::before,
+input[type="button"]:hover::before,
+input[type="submit"]:hover::before {
+  height: 100%;
+}
+/*# sourceMappingURL=pseudoclasses.css.map */

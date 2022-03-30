@@ -1,0 +1,72 @@
+body {
+  background-color: black;
+}
+
+a {
+  text-decoration: none;
+}
+
+.getting_started {
+  margin: 20px;
+}
+
+button,
+.btn,
+input[type="button"],
+input[type="submit"] {
+  color: white;
+  background-color: transparent;
+  font-size: 28px;
+  padding: 10px;
+  font-family: "Courier New", Courier, monospace;
+  display: inline-block;
+  border: 5px solid #ff169e;
+  position: relative;
+}
+
+button .filler,
+.btn .filler,
+input[type="button"] .filler,
+input[type="submit"] .filler {
+  position: absolute;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  z-index: -1;
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #ff169e;
+}
+
+button:hover .filler,
+.btn:hover .filler,
+input[type="button"]:hover .filler,
+input[type="submit"]:hover .filler {
+  width: 100%;
+}
+
+/*
+@keyframes example {
+    0% {
+        background-color: red;
+        height: 500px;
+    }
+    25% {
+        background-color: yellow;
+    }
+    50% {
+        background-color: blue;
+        height: 0px;
+    }
+    100% {
+        background-color: green;
+    }
+}
+
+.test:hover {
+    animation-name: example;
+    animation-duration: 4s;
+}
+*/
+/*# sourceMappingURL=styles.css.map */

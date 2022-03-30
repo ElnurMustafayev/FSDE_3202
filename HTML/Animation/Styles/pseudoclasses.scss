@@ -1,0 +1,58 @@
+$violet: #ff169e;
+body {
+    background-color: black;
+}
+
+a {
+    text-decoration: none;
+}
+
+button,
+.btn,
+input[type="button"],
+input[type="submit"] {
+    color: white;
+    background-color: transparent;
+    font-size: 28px;
+    padding: 10px;
+    font-family: "Courier New", Courier, monospace;
+    display: inline-block;
+    border: 5px solid $violet;
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        transition: 0.3s;
+        z-index: -1;
+        height: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: $violet;
+    }
+
+    &:hover {
+        &::before {
+            height: 100%;
+        }
+    }
+}
+
+
+
+// body {
+
+//     .breckets {
+//         &::before {
+//             content: "";
+//         }
+
+//         &::after {
+//             content: "";
+//             width: 10px;
+//             background-color: red;
+//             display: block;
+//         }
+//     }
+// }

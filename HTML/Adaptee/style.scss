@@ -1,0 +1,25 @@
+body {
+  transition: 0.5s;
+
+  .container {
+    display: flex;
+    flex-direction: row;
+
+    .cube {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      margin: 5px;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
+
+    .container {
+      flex-direction: column;
+    }
+  }
+}
